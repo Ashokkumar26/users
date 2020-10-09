@@ -4,6 +4,8 @@ const mongoose = require('mongoose')
 const app = express();
 require('dotenv/config')
 
+var port = 2000 || process.env.port
+
 //Body-Parser
 app.use(express.json())
 
@@ -29,6 +31,6 @@ mongoose.connect(process.env.DB_CONNECTION, (error) => {
 })
 
 //LocalHost
-app.listen(2000, () => {
+app.listen(port, () => {
     console.log('server started on 2000')
 })
