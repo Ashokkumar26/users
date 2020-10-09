@@ -32,5 +32,5 @@ mongoose.connect(process.env.DB_CONNECTION, (error) => {
 
 //LocalHost
 app.listen(port, () => {
-    console.log('server started on 2000')
+    console.log(`server started on ${port}`)
 })
